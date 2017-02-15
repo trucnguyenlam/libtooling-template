@@ -1,7 +1,12 @@
 cmake_minimum_required(VERSION 2.8)
 
 project(clang-tool)
-set(LLVM_CONFIG_EXECUTABLE /opt/llvm/bin/llvm-config)
+if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+    set(LLVM_CONFIG_EXECUTABLE llvm-config)
+else()
+    set(LLVM_CONFIG_EXECUTABLE /opt/llvm/bin/llvm-config)
+endif()
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/bin/)
 
 # execute_process (
