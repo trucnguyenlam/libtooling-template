@@ -44,3 +44,6 @@ CTestTestfile.cmake
 # Customs
 bin/
 regression/
+
+# ides
+.vscode/
