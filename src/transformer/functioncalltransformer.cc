@@ -31,7 +31,7 @@ void FunctionCallTransformer::run(const clang::ast_matchers::MatchFinder::MatchR
         {
             if(result.SourceManager->isInSystemHeader(function->getSourceRange().getBegin()))
                 return;
-                
+
             functions.push_back(function->getNameAsString());
         }
     }

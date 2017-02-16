@@ -25,6 +25,7 @@ int main(int argc, const char **argv)
         }
 
         auto sourcetxt = utils::getSourceCode(sourceFile);
+
         auto compileCommands = optionsParser.getCompilations().getCompileCommands(getAbsolutePath(sourceFile));
 
         std::vector<std::string> compileArgs = utils::getCompileArgs(compileCommands);
